@@ -1,0 +1,33 @@
+
+#include<stdio.h>
+#include<process.h>
+#include<conio.h>
+void main()
+{
+	FILE *fp;
+
+	char fname[20];
+	char c;
+	clrscr();
+	printf("\n Enter the name of the file :");
+	gets(fname);
+	fp=fopen(fname,"r");
+	if(ferror(fp)!=0)
+	{
+		printf("file does not exist");
+		exit(0);
+	}
+	else
+	{
+	while(1)
+	{
+		c=fgetc(fp);
+		if(feof(fp))
+			break;
+		putchar(c);
+
+	}
+	}
+	fclose(fp);
+	getch();
+}

@@ -1,0 +1,64 @@
+r#include<stdio.h>
+#include<conio.h>
+#include<string.h>
+#include<process.h>
+int xstrcmp(char[],char[]);
+void main()
+{
+	char s1[30],s2[30];
+	int m;
+	clrscr();
+	printf("\n Enter first string ");
+	gets(s1);
+	printf("\n Enter second string ");
+	gets(s2);
+	m=xstrcmp(s1,s2);
+	if(m==0)
+	{
+		printf("\n The string are different ");
+	}
+	else
+	{
+		printf("\n The strings are same ");
+	}
+
+	getch();
+}
+
+int xstrcmp(char *s1,char *s2)
+{
+	int l1,l2,flag=0;
+	int i=0;
+	l1=strlen(s1);
+	l2=strlen(s2);
+	if(l1!=l2)
+	{
+		return(0);
+	}
+	while(i<l1)
+	{
+		if(*s1!=*s2)
+		{
+			return(0);
+		}
+
+		else
+		{
+			s1++;
+			s2++;
+			flag=1;
+			i++;
+		}
+	}
+	if(flag==1)
+	{
+		return (1);
+	}
+}
+
+
+
+
+
+
+

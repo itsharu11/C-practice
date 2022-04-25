@@ -1,0 +1,52 @@
+/*
+	data types
+		-domain in which we can store the data
+		-there are three types data
+			-integer
+				a) short
+				b)int
+				c)long
+			-floating numbers
+				a)float
+				b)double
+			-character
+				a)char
+	There are two tyes of type casting
+		-implicit type
+			a)type casting done automatically
+			b)small data type automatically type casting large data type.
+		-explicit type
+			a)type explicit casting is done forcefully by user.
+*/
+
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+	int a=20,b=3;
+	float c;
+	char ch='a';
+	clrscr();
+	c=a/(float)b;
+	/*
+	 Here a)c=(float)a/b;
+		a- is converted into floating point.
+		c- is already in floating data type
+		so 'c' and 'a' are float and b is int.
+		so the answer will be in float.
+	 Here b)c=a/(float)b;
+		b- is converted to floating point.
+		The procedure afterwards is same as above
+	 */
+	printf("division=%f",c);
+	printf("\ncharacter c = %c",ch);
+	getch();
+	return 0;
+}
+
+
+
+
+
+
+

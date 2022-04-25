@@ -1,0 +1,30 @@
+/*
+		for loop:
+			Syntax:
+			for(initialisation;condition;inc/dec)
+			{
+				//body
+			}
+*/
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+	int i=1;
+	clrscr();
+     //	i= 2 + i++;
+    //	printf("%d",i);
+	i= 2 + ++i;
+	printf("%d",i);
+	/*
+	for(;i<10;)
+	{
+		++i;
+	       //	i=i++;
+		printf("i = %d \t",i);
+	      //  i++;
+	}
+	*/
+	getch();
+}

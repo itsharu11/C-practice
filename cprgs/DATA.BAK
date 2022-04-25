@@ -1,0 +1,22 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+	FILE *fp1,*fp2;
+	char fdata[20],udata[20];
+	clrscr();
+	puts("\n Enter string");
+	gets(udata);
+	if(fp1=fopen("DATA","w")==NULL)
+	{
+	printf("\n File not found");
+	exit(0);
+	}
+	fprintf(fp1,"%s",udata);
+	getch();
+}
+
+
+
+
+

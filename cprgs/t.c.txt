@@ -1,0 +1,1 @@
+#include<stdio.h> void main(){  int a = 311;    char *ptr;    ptr =( char *)&a;    printf("%d ",*ptr);    getch();  } 

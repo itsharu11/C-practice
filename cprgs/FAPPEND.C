@@ -1,0 +1,40 @@
+#include<stdio.h>
+#include<conio.h>
+
+struct student {
+int r_no;
+char name[20];
+int age;
+};
+void main()
+{
+  FILE *fp;
+  struct student s;
+  int i,index,pos;
+  clrscr();
+  // Display the existing records
+  fp=fopen("DATA","a+");
+/*  puts("The existing records are ");
+  while((fp(&s,sizeof(struct student),0,fp))!=0)
+	printf("%d %s %d",s.r_no,s.name,s.age);
+*/
+	for(i=0;i<5;i++)
+	{
+   //	fscanf(fp,"%d %s %d ",s.r_no,s.name,s.age);
+	printf(fp,"%d %s %d\n",s.r_no,s.name,s.age);
+	}
+
+  //append the record at the end
+  puts("\n Enter the record to append");
+  scanf("%d %s %d",&s.r_no,s.name,&s.age);
+  fwrite(&s,sizeof(struct student),1,fp);
+
+  //read the records after append
+  rewind(fp);
+  puts("\n The redcords after append are ");
+  while((fread(&s,sizeof(struct student),1,fp))!=0)
+	printf("%d %s %d ",s.r_no,s.name,s.age);
+  fclose(fp);
+  getch();
+}
+
